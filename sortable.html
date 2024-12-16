@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="sortable.css">
+    <title>Superheros suck!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main class="wrapper">
+        <div class="topSection">
+            
+            <div class="left">
+                <div class="row">
+                    <select id="pageSize" >
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="all">All</option>
+                    </select>
+                    
+                </div>
+                </div>
+                <div class="right">
+
+                    <div class="search-wrapper">
+                        <label for="search">Search</label>
+                        <input type="search" id="search">
+                    </div>
+                </div>
+    </div>
+    
+        
+    
+        <table class = 'superhero-table'>
+            <thead>
+                <tr class="tableR">
+                    <th data-colum="icon">Icon</th>
+                    <th onclick="sortTable('name')" data-column="name">Name</th>
+                    <th onclick="sortTable('fullName')" data-column="fullName">Full name</th>
+                    <th onclick="sortTable('powerStats')" data-column="powerStats">Powerstats</th>
+                    <th onclick="sortTable('race')" data-column="race">Race</th>
+                    <th onclick="sortTable('gender')" data-column="gender">Gender</th>
+                    <th onclick="sortTable('height')" data-column="height">Height</th>
+                    <th onclick="sortTable('weight')" data-column="weight">Weight</th>
+                    <th onclick="sortTable('placeOfBirth')" data-column="placeOfBirth">Place of Birth</th>
+                    <th onclick="sortTable('alignment')" data-column="alignment">Alignment</th>
+                </tr>
+                
+            </thead>
+            <tbody  id="superhero-table-body">
+                
+            </tbody>
+        </table>
+        
+        <div class="pagination" id="paginationButtons"></div>
+</main>
+  
+    
+    <script type="text/javascript" src="sortable.js"></script>
+    
+</body>
+</html>
